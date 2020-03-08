@@ -58,6 +58,12 @@ the Intel Dev Cloud account doesn't provide any screens and we're only intereste
 
 ![img](stats.png)
 
+To run the benchmarks open the file `checkperformance.ipynb`. Note that it uses the file `main-inteldev.py` because I needed
+some instructions which are not available locally.
+
+I suggest running the program locally in order to be able to watch the intermediate states of the pipeline on the screen and your mouse.
+Moving the mouse is not possible on the intel dev platform so I commented out that code to produce the benchmarks
+
 ## Results
 
 The total inference time for all models is similar. I interpret the results on the simplicity of the used models.
