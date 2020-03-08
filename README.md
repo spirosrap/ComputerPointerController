@@ -44,8 +44,9 @@ python3 main.py -fm ../intel/face-detection-adas-binary-0001/FP32-INT1/face-dete
 
 ## Documentation
 
-For running the app there are a few required arguments and a few optional. The required are the names of the four models.
-Also, the output directory and the input media (or a camera). To activate the camera instead of entering the path of a video file put `cam`.
+For running the app there are a few required arguments and a few optional. The required are the names of the four models ("-fm","-gm","-lm","-gm").
+Also, the output directory and the input media (or a camera). To activate the camera instead of entering the path of a video file put `cam`("-i") .
+If you want to see intermediate results for each stage of the pipeline, activate the parameter "--visualization", the values are the same as for the model ("-fm","-gm","-lm","-gm").
 
 Also, for the app to work, the video or the camera needs to have a face that's moving its eyes. For the next
 versions I plan to accommodate for the various sources of error (A missing face, not looking, etc.)

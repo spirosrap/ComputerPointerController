@@ -52,9 +52,16 @@ class HeadPoseEstimation:
         # Add a CPU extension, if applicable
         if self.extensions and "CPU" in self.device:
             self.plugin.add_cpu_extension(self.extensions)
-
         # Read the IR as a IENetwork
         self.network = IENetwork(model=model_xml, weights=model_bin)
+
+        ### Check for any unsupported layers, and let the user
+        ### know if anything is missing. Exit the program, if so.
+        unsupported_layers = [l for l in self.network.layers.keys() if l not in self.plugin.get_supported_layers(self.network)]
+        if len(unsupported_layers) != 0:
+            print("Unsupported layers found: {}".format(unsupported_layers))
+            print("Check whether extensions are available to add to IECore.")
+            exit(1)
 
         # Load the IENetwork into the plugin
         self.exec_network = self.plugin.load(self.network)
