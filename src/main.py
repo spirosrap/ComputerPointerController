@@ -17,12 +17,9 @@ from facial_landmarks_detection import FaceLandmarksDetection
 from gaze_estimation import GazeEstimation
 from mouse_controller import MouseController
 
-# shoppingInfo contains statistics for the shopping information
 MyStruct = namedtuple("shoppingInfo", "shopper, looker")
 INFO = MyStruct(0, 0)
-
 POSE_CHECKED = False
-
 DELAY = 5
 
 def args_parser():
