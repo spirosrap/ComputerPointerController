@@ -128,7 +128,7 @@ class GazeEstimation:
         tmpX = gaze_vector[0] * cs + gaze_vector[1] * sn
         tmpY = -gaze_vector[0] * sn + gaze_vector[1] * cs
 
-        return tmpX,tmpY
+        return (tmpX,tmpY),(gaze_vector)
         # raise NotImplementedError
 
     def clean(self):
@@ -139,4 +139,3 @@ class GazeEstimation:
         del self.plugin
         del self.network
         del self.exec_network
-        
