@@ -58,11 +58,10 @@ the Intel Dev Cloud account doesn't provide any screens and we're only intereste
 
 ![img](stats.png)
 
-
-
 ## Results
 
-The total inference time for all similar is similar. I interpret the results on the used models
+The total inference time for all models is similar. I interpret the results on the simplicity of the used models.
+If you notice any error on my results please open an issue.
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
